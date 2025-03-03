@@ -58,6 +58,14 @@ X-Real-Ip: 172.20.0.1
 ##  4. Get to know the Traefik Dashboard
 1. Open a browser tab and type or click: http://0.0.0.0:8080 to open the Traefik Dashboard
 
+## 5. Routers?
+1. A sintaxe do label é:
+   ```
+   traefik.entryPoint.routers.nome-do-serviço.rule
+   traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)
+   ```
+2. Mude o **whoami** para outro valor e execute `docker compose up -d`.
+3. O serviço do Traefik foi reiniciado?
 
 # Continue to the Configure Traefik Lab
 
